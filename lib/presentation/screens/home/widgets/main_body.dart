@@ -238,7 +238,7 @@ class _MainBodyState extends State<MainBody> {
                           .gray400
                           .withTextSpanChildren([
                             TextSpan(
-                                text: " Code of Ethics ",
+                                text: " Code of Conduct ",
                                 recognizer: TapGestureRecognizer()
                                   ..onTap = () => Utils.launchURL(
                                       url: "https://google.com"),

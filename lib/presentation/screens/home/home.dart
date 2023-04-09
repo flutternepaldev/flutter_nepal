@@ -14,7 +14,19 @@ class _HomeState extends State<Home> {
   void initState() {
     homeViewModel = HomeViewModel(context.read<Repository>());
     homeViewModel.getUserDetails(context);
+    showSponsorDialog();
     super.initState();
+  }
+
+  showSponsorDialog() {
+    Future.delayed(const Duration(seconds: 3), () {
+      VxDialog.showAlert(
+        context,
+        title: "For Sponsors",
+        content: "Please mail us at sponsors@flutternepal.dev",
+        confirm: 'OK',
+      );
+    });
   }
 
   @override

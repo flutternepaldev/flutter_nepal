@@ -22,56 +22,56 @@ class LeftBody extends StatelessWidget {
               designation: "Software Developer @World Advance Technology",
               topics: "",
             ),
-            // 20.heightBox,
-            // "Speakers".text.underline.xl4.white.make(),
-            // 20.heightBox,
-            // Wrap(
-            //   alignment: WrapAlignment.spaceBetween,
-            //   runAlignment: WrapAlignment.spaceBetween,
-            //   crossAxisAlignment: WrapCrossAlignment.end,
-            //   spacing: 16,
-            //   runSpacing: 16,
-            //   children: const [
-            //     Speakers(
-            //       name: "Sangam Singh",
-            //       image: Assets.assetsImagesCodersangam,
-            //       designation:
-            //           "Software Developer \n@World Advance \nTechnology",
-            //       topics: "Topics: creation of \ncrypto wallet locally",
-            //     ),
-            //     Speakers(
-            //       name: "Sangam Singh",
-            //       image: Assets.assetsImagesCodersangam,
-            //       designation:
-            //           "Software Developer \n@World Advance \nTechnology",
-            //       topics: "Topics: creation of \ncrypto wallet locally",
-            //     ),
-            //   ],
-            // ),
-            // 20.heightBox,
-            // Wrap(
-            //   alignment: WrapAlignment.spaceBetween,
-            //   runAlignment: WrapAlignment.spaceBetween,
-            //   crossAxisAlignment: WrapCrossAlignment.end,
-            //   spacing: 16,
-            //   runSpacing: 16,
-            //   children: const [
-            //     Speakers(
-            //       name: "Sangam Singh",
-            //       image: Assets.assetsImagesCodersangam,
-            //       designation:
-            //           "Software Developer \n@World Advance \nTechnology",
-            //       topics: "Topics: creation of \ncrypto wallet locally",
-            //     ),
-            //     Speakers(
-            //       name: "Sangam Singh",
-            //       image: Assets.assetsImagesCodersangam,
-            //       designation:
-            //           "Software Developer \n@World Advance \nTechnology",
-            //       topics: "Topics: creation of \ncrypto wallet locally",
-            //     ),
-            //   ],
-            // ),
+            20.heightBox,
+            "Speakers".text.underline.xl4.white.make(),
+            20.heightBox,
+            Wrap(
+              alignment: WrapAlignment.spaceBetween,
+              runAlignment: WrapAlignment.spaceBetween,
+              crossAxisAlignment: WrapCrossAlignment.end,
+              spacing: 16,
+              runSpacing: 16,
+              children: const [
+                Speakers(
+                  width: 170,
+                  name: "First Speaker",
+                  image: Assets.assetsImagesDefaultImage,
+                  designation: "",
+                  topics: "",
+                ),
+                Speakers(
+                  width: 170,
+                  name: "Second Speaker",
+                  image: Assets.assetsImagesDefaultImage,
+                  designation: "",
+                  topics: "",
+                ),
+              ],
+            ),
+            20.heightBox,
+            Wrap(
+              alignment: WrapAlignment.spaceBetween,
+              runAlignment: WrapAlignment.spaceBetween,
+              crossAxisAlignment: WrapCrossAlignment.end,
+              spacing: 16,
+              runSpacing: 16,
+              children: const [
+                Speakers(
+                  width: 170,
+                  name: "Third Speaker",
+                  image: Assets.assetsImagesDefaultImage,
+                  designation: "",
+                  topics: "",
+                ),
+                Speakers(
+                  width: 170,
+                  name: "Fourth Speaker",
+                  image: Assets.assetsImagesDefaultImage,
+                  designation: "",
+                  topics: "",
+                ),
+              ],
+            ),
             40.heightBox,
             "Event Timeline".text.underline.xl4.white.make(),
             TimelineTile(

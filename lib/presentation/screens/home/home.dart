@@ -1,5 +1,6 @@
 part of 'home_imports.dart';
 
+@RoutePage()
 class Home extends StatefulWidget {
   const Home({super.key});
 

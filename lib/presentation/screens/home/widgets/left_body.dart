@@ -25,13 +25,13 @@ class LeftBody extends StatelessWidget {
             20.heightBox,
             "Speakers".text.underline.xl4.white.make(),
             20.heightBox,
-            Wrap(
+            const Wrap(
               alignment: WrapAlignment.spaceBetween,
               runAlignment: WrapAlignment.spaceBetween,
               crossAxisAlignment: WrapCrossAlignment.end,
               spacing: 16,
               runSpacing: 16,
-              children: const [
+              children: [
                 Speakers(
                   width: 170,
                   name: "First Speaker",
@@ -49,13 +49,13 @@ class LeftBody extends StatelessWidget {
               ],
             ),
             20.heightBox,
-            Wrap(
+            const Wrap(
               alignment: WrapAlignment.spaceBetween,
               runAlignment: WrapAlignment.spaceBetween,
               crossAxisAlignment: WrapCrossAlignment.end,
               spacing: 16,
               runSpacing: 16,
-              children: const [
+              children: [
                 Speakers(
                   width: 170,
                   name: "Third Speaker",

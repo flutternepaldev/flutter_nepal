@@ -3,7 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:slider_captcha/slider_capchar.dart';
+import 'package:slider_captcha/slider_captcha.dart';
 import 'package:timeline_tile/timeline_tile.dart';
 import 'package:velocity_bloc/velocity_bloc.dart';
 import 'package:velocity_x/velocity_x.dart';

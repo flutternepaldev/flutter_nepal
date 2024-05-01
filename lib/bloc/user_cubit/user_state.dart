@@ -15,8 +15,7 @@ class UserInitial extends UserState {
 }
 
 class UserUpdateState extends UserState {
-  const UserUpdateState({required UserInfoModel model, required bool changed})
-      : super(model: model, changed: changed);
+  const UserUpdateState({required super.model, required super.changed});
   @override
   List<Object> get props => [model, changed];
 }

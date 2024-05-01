@@ -75,9 +75,9 @@ class ApiClient {
       debugPrint('STATUS CODE: ${response.statusCode}');
       debugPrint('DATA: ${response.data}');
       return response;
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       if (e.response != null) {
-        debugPrint('DioError: ${e.response!.statusMessage}');
+        debugPrint('DioException: ${e.response!.statusMessage}');
         if (e.response!.data['responseCode'] == '205062' ||
             e.response?.data['responseCode'] == '205000') {
           throw ApiException(e.response!.data['message'], tokenExpired: true);
@@ -85,7 +85,7 @@ class ApiClient {
           throw ApiException(e.response!.statusMessage);
         }
       } else {
-        debugPrint('DioError: ${e.message}');
+        debugPrint('DioException: ${e.message}');
         throw ApiException(e.message);
       }
     }
@@ -130,15 +130,15 @@ class ApiClient {
       debugPrint('STATUS CODE: ${response.statusCode}');
       debugPrint('DATA: ${response.data}');
       return response;
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       //any logging platform can be configured like firebase crashlytics
       if (e.response != null) {
-        debugPrint('DioError: ${e.response?.statusMessage}');
+        debugPrint('DioException: ${e.response?.statusMessage}');
         if ((e.response?.data["response"] ?? e.response?.data["error"])
             .contains("Session expired!")) {}
         throw ApiException(e.response?.data);
       } else {
-        debugPrint('DioError: ${e.message}');
+        debugPrint('DioException: ${e.message}');
         throw ApiException(e.message);
       }
     }
@@ -189,9 +189,9 @@ class ApiClient {
       debugPrint('STATUS CODE: ${response.statusCode}');
       debugPrint('DATA: ${response.data}');
       return response;
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       if (e.response != null) {
-        debugPrint('DioError: ${e.response!.statusMessage}');
+        debugPrint('DioException: ${e.response!.statusMessage}');
         if (e.response!.data['responseCode'] == '205062' ||
             e.response?.data['responseCode'] == '205000') {
           throw ApiException(e.response!.data['message'], tokenExpired: true);
@@ -199,7 +199,7 @@ class ApiClient {
           throw ApiException(e.response!.statusMessage);
         }
       } else {
-        debugPrint('DioError: ${e.message}');
+        debugPrint('DioException: ${e.message}');
         throw ApiException(e.message);
       }
     }
@@ -246,9 +246,9 @@ class ApiClient {
       debugPrint('STATUS CODE: ${response.statusCode}');
       debugPrint('DATA: ${response.data}');
       return response;
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       if (e.response != null) {
-        debugPrint('DioError: ${e.response!.statusMessage}');
+        debugPrint('DioException: ${e.response!.statusMessage}');
         if (e.response!.data['responseCode'] == '205062' ||
             e.response?.data['responseCode'] == '205000') {
           throw ApiException(e.response!.data['message'], tokenExpired: true);
@@ -256,7 +256,7 @@ class ApiClient {
           throw ApiException(e.response!.statusMessage);
         }
       } else {
-        debugPrint('DioError: ${e.message}');
+        debugPrint('DioException: ${e.message}');
         throw ApiException(e.message);
       }
     }

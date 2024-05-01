@@ -13,7 +13,7 @@ class AuthInitial extends AuthState {
 }
 
 class AuthUpdated extends AuthState {
-  const AuthUpdated(bool authorized) : super(authorized);
+  const AuthUpdated(super.authorized);
 
   @override
   List<Object> get props => [authorized];

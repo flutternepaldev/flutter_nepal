@@ -10,7 +10,7 @@ import 'core/themes/app_theme.dart';
 import 'data/api/api.dart';
 import 'data/repositories/repository.dart';
 import 'logic/debug/app_bloc_observer.dart';
-import 'presentation/router/router_imports.gr.dart';
+import 'presentation/router/router_imports.dart';
 import 'utilities/local_storage_service.dart';
 
 final getItInstance = GetIt.instance;
@@ -31,18 +31,17 @@ Future<void> main() async {
         authApi: AuthApi(getItInstance<LocalStorageService>()),
         othersApi: OthersApi(getItInstance<LocalStorageService>()),
       ),
-      child: MyApp(),
+      child: const MyApp(),
     ),
   );
 }
 
 class MyApp extends StatelessWidget {
-  MyApp({Key? key}) : super(key: key);
-
-  final _appRouter = AppRouter();
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final appRouter = AppRouter();
     return BlocProvider<UserCubit>(
       create: (BuildContext context) => UserCubit(),
       child: MaterialApp.router(
@@ -50,8 +49,8 @@ class MyApp extends StatelessWidget {
         theme: AppTheme.lightTheme,
         darkTheme: AppTheme.darkTheme,
         debugShowCheckedModeBanner: false,
-        routerDelegate: _appRouter.delegate(),
-        routeInformationParser: _appRouter.defaultRouteParser(),
+        routerDelegate: appRouter.delegate(),
+        routeInformationParser: appRouter.defaultRouteParser(),
       ),
     );
   }

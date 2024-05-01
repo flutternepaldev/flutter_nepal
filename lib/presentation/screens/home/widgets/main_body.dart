@@ -213,7 +213,7 @@ class _MainBodyState extends State<MainBody> {
                                       widget.homeViewModel.isConfirmed
                                           .onUpdateData(
                                               checkState.data.toggle());
-                                      AutoRouter.of(context).pop();
+                                      AutoRouter.of(context).canPop();
                                     } else {
                                       return await Future.delayed(
                                               const Duration(seconds: 1))

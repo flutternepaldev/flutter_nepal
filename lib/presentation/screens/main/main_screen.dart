@@ -1,5 +1,6 @@
 part of 'main_imports.dart';
 
+@RoutePage()
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
 

@@ -10,6 +10,7 @@ class AppTheme {
       primary: MyColors.flagRedColor,
       secondary: MyColors.flagBlueColor,
     ),
+    useMaterial3: true,
     visualDensity: VisualDensity.adaptivePlatformDensity,
     fontFamily: GoogleFonts.comicNeue().fontFamily,
   );
@@ -19,6 +20,7 @@ class AppTheme {
       primary: MyColors.flagRedColor,
       secondary: MyColors.flagBlueColor,
     ),
+    useMaterial3: true,
     visualDensity: VisualDensity.adaptivePlatformDensity,
     fontFamily: GoogleFonts.comicNeue().fontFamily,
   );

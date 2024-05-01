@@ -14,8 +14,8 @@ class _HomeState extends State<Home> {
   @override
   void initState() {
     homeViewModel = HomeViewModel(context.read<Repository>());
-    homeViewModel.getUserDetails(context);
-    showSponsorDialog();
+    // homeViewModel.getUserDetails(context);
+    // showSponsorDialog();
     super.initState();
   }
 
@@ -47,10 +47,12 @@ class _HomeState extends State<Home> {
         appBar: AppBar(
           backgroundColor: MyColors.flagRedColor,
           title: const Text(
-              "Flutter Nepal (Registration Starts from May 01, 2023)"),
+            "Flutter Nepal (Registration Starts from July 01, 2024)",
+            style: TextStyle(color: Colors.white),
+          ),
         ),
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             60.heightBox,
@@ -108,23 +110,9 @@ class _HomeState extends State<Home> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 "Made with ❤️ in Nepal".text.white.make(),
-                "A"
-                    .richText
-                    .withTextSpanChildren([
-                      TextSpan(
-                        text: " Flutter ",
-                        recognizer: TapGestureRecognizer()
-                          ..onTap =
-                              () => Utils.launchURL(url: "https://flutter.dev"),
-                      ),
-                      const TextSpan(
-                        text: "Product",
-                      ),
-                    ])
-                    .white
-                    .make(),
+                "❤️ Flutter ❤️".text.white.make(),
               ],
-            ).pSymmetric(h: 25)
+            ).pSymmetric(h: 25, v: 10),
           ],
         ).centered(),
       ),

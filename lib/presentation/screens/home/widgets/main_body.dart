@@ -88,6 +88,7 @@ class _MainBodyState extends State<MainBody> {
                     hintStyle: TextStyle(color: MyColors.white),
                     style: TextStyle(color: MyColors.white),
                     suffixColor: MyColors.white,
+                    fillColor: Colors.transparent,
                     controller: widget.homeViewModel.nameController,
                     validator: (value) {
                       if (value.isEmptyOrNull) {
@@ -104,6 +105,7 @@ class _MainBodyState extends State<MainBody> {
                     hintStyle: TextStyle(color: MyColors.white),
                     style: TextStyle(color: MyColors.white),
                     suffixColor: MyColors.white,
+                    fillColor: Colors.transparent,
                     controller: widget.homeViewModel.emailController,
                     validator: (value) {
                       if (value.isEmptyOrNull) {
@@ -120,6 +122,7 @@ class _MainBodyState extends State<MainBody> {
                     hintStyle: TextStyle(color: MyColors.white),
                     style: TextStyle(color: MyColors.white),
                     suffixColor: MyColors.white,
+                    fillColor: Colors.transparent,
                     controller: widget.homeViewModel.phoneController,
                     validator: (value) {
                       if (value.isEmptyOrNull) {
@@ -136,6 +139,7 @@ class _MainBodyState extends State<MainBody> {
                     hintStyle: TextStyle(color: MyColors.white),
                     style: TextStyle(color: MyColors.white),
                     suffixColor: MyColors.white,
+                    fillColor: Colors.transparent,
                     controller: widget.homeViewModel.companyController,
                     validator: (value) {
                       if (value.isEmptyOrNull) {
@@ -152,6 +156,7 @@ class _MainBodyState extends State<MainBody> {
                     hintStyle: TextStyle(color: MyColors.white),
                     style: TextStyle(color: MyColors.white),
                     suffixColor: MyColors.white,
+                    fillColor: Colors.transparent,
                     controller: widget.homeViewModel.experienceController,
                     validator: (value) {
                       if (value.isEmptyOrNull) {
@@ -171,6 +176,7 @@ class _MainBodyState extends State<MainBody> {
                     hint: "Facebook",
                     hintStyle: TextStyle(color: MyColors.white),
                     style: TextStyle(color: MyColors.white),
+                    fillColor: Colors.transparent,
                     suffixColor: MyColors.white,
                     controller: widget.homeViewModel.heardAboutController,
                   ),
@@ -208,21 +214,21 @@ class _MainBodyState extends State<MainBody> {
                                   colorBar: const Color(0xff00579B),
                                   colorCaptChar: const Color(0xff00579B),
                                   onConfirm: (myvalue) async {
-                                    debugPrint(myvalue.toString());
-                                    if (myvalue.toString() == "true") {
-                                      widget.homeViewModel.isConfirmed
-                                          .onUpdateData(
-                                              checkState.data.toggle());
-                                      AutoRouter.of(context).canPop();
-                                    } else {
-                                      return await Future.delayed(
-                                              const Duration(seconds: 1))
-                                          .then(
-                                        (value) {
-                                          controller.create.call();
-                                        },
-                                      );
-                                    }
+                                    // debugPrint(myvalue.toString());
+                                    // if (myvalue.toString() == "true") {
+                                    //   widget.homeViewModel.isConfirmed
+                                    //       .onUpdateData(
+                                    //           checkState.data.toggle());
+                                    //   AutoRouter.of(context).canPop();
+                                    // } else {
+                                    //   return await Future.delayed(
+                                    //           const Duration(seconds: 1))
+                                    //       .then(
+                                    //     (value) {
+                                    //       controller.create.call();
+                                    //     },
+                                    //   );
+                                    // }
                                   },
                                 ).p20(),
                               ),
@@ -240,8 +246,7 @@ class _MainBodyState extends State<MainBody> {
                             TextSpan(
                                 text: " Code of Conduct ",
                                 recognizer: TapGestureRecognizer()
-                                  ..onTap = () => Utils.launchURL(
-                                      url: "https://google.com"),
+                                  ..onTap = () {},
                                 style: TextStyle(color: MyColors.whiteColor)),
                             const TextSpan(
                               text:

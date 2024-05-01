@@ -26,11 +26,6 @@ class RightBody extends StatelessWidget {
           ),
           60.heightBox,
           "Media Partners".text.underline.xl.white.make(),
-          Image.asset(
-            Assets.assetsImagesGangajal,
-            width: 200,
-            height: 80,
-          ),
         ],
       ).pOnly(left: 30),
     ).expand();

@@ -1,4 +1,3 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +9,6 @@ import 'package:velocity_x/velocity_x.dart';
 
 import '../../../../core/constants/assets.dart';
 import '../../../../core/constants/my_colors.dart';
-import '../../../../utilities/utils.dart';
 import '../home_imports.dart';
 
 part 'left_body.dart';
